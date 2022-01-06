@@ -1,0 +1,11 @@
+<h3>Post component</h3>
+
+<ng-container *ngIf="post">
+    <h4>{{post.title}}</h4>
+    <p>{{post.body}}</p>
+    <p>UserId: {{post.userId}}</p>
+    <p>PostId: {{post.id}}</p>
+</ng-container>
+
+<button type="button" (click)="onClickBack()">Back</button>
+<button type="button" (click)="onClickComments()">See comments for this posts</button>
