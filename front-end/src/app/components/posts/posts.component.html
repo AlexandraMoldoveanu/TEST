@@ -1,0 +1,8 @@
+<h3>Posts component</h3>
+
+<ng-container *ngIf="posts">
+    <div *ngFor="let post of posts" (click)="onClickPost(post.id)" class="clickable list-item">
+        <h4>{{post.title}}</h4>
+        <p>{{post.body}}</p>
+    </div>
+</ng-container>
