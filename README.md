@@ -1,12 +1,12 @@
 **IMPORTANT - before starting to work on assignments:**
 
-Don't get overwhelmed by the length of this document :)
-Take it step by step with the instructions below and follow in the same manner with the assignments.
-Do as much as you feel comfortable - you don't have to feel pressured to solve every assignment. Even if you submit only a few finished assignments, it is OK. We want to see how you approach problems. Of course, the more assignments are done correctly, the better.
-Most of the assignments could be solved with minimal language specific knowledge. You just have to pay attention to the existing code and try to extend it in a similar way.
-Have a look at the official documentations for Angular/CLI and Nestjs/CLI to find out how to generate new components, services, controllers, etc.
-Try to stick to the existing structure and formatting of code, as much as possible.
-Try to understand the concepts and do not deliver code that you don't understand. 
+- Don't get overwhelmed by the length of this document :)  
+- Take it step by step with the instructions below and follow in the same manner with the assignments.  
+- Do as much as you feel comfortable - you don't have to feel pressured to solve every assignment. Even if you submit only a few finished assignments, it is OK. We want to see how you approach problems. Of course, the more assignments are done correctly, the better.  
+- Most of the assignments could be solved with minimal language specific knowledge. You just have to pay attention to the existing code and try to extend it in a similar way.  
+- Have a look at the official documentations for Angular/CLI and Nestjs/CLI to find out how to generate new components, services, controllers, etc.  
+- Try to stick to the existing structure and formatting of code, as much as possible.  
+- Try to understand the concepts and do not deliver code that you don't understand. 
 
 When you want to submit you finished code:
 1. go into front-end folder and zip the src subfolder
