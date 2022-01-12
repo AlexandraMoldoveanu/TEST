@@ -65,7 +65,7 @@ You can find all the posts and all the comments inside the mock-data folder.
 
 **Assignments for front-end application:**
 
-1. Create 2 more methods inside `rest.service.ts`.
+1. Create 3 more methods inside `rest.service.ts`.
 
 `getAllComments(): PostComment[] {//it shall get all comments for all posts from the back-end, and return them as Observable<PostComment[]>}`
 
