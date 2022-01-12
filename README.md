@@ -43,9 +43,9 @@ Open the URL in a browser and make sure it works. It sould display Hello World!
 
 2. Generate a new service using nestjs/cli. The service shall be named postComments (the nestjs/cli will automatically append the Service suffix so that the resulting classname will be PostCommentsService). This service shall contain 3 methods: 
 
-`getAllComments(): PostComment[] {//it shall return all comments for all posts}`
-`getCommentById(): PostComment {//it shall return the comment with a given id}`
-`getCommentsForPostId(postId: number): PostComment[] {//it shall return all the comments for a post with a given id}`
+`getAllComments(): PostComment[] {//it shall return all comments for all posts}`  
+`getCommentById(): PostComment {//it shall return the comment with a given id}`  
+`getCommentsForPostId(postId: number): PostComment[] {//it shall return all the comments for a post with a given id}`  
 
 You have to implement all 3 methods. They will be used later on by the controller that you will create for the assignment number 3.
 
