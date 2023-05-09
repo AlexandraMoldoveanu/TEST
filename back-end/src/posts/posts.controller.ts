@@ -13,7 +13,7 @@ export class PostsController {
 
   @Get(':id')
   getPostById(@Param() params): Post {
-      return this.postsService.getPostById(params.id);
+      return this.postsService.getPostById(+params.id);
   }
 }
 
