@@ -17,8 +17,8 @@ When you want to submit you finished code:
 **Prerequisites:**
 
 1. make sure you have Visual Studio Code or similar editor installed (here is the installer for VS Code: https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user).
-2. make sure you have git installed (install it if you don't have it: https://github.com/git-for-windows/git/releases/download/v2.34.1.windows.1/Git-2.34.1-64-bit.exe).
-3. make sure you have NodeJS installed (install it if you don't have it: https://nodejs.org/dist/v16.13.1/node-v16.13.1-x64.msi).
+2. make sure you have git installed (install it if you don't have it: https://github.com/git-for-windows/git/releases/download/v2.40.1.windows.1/Git-2.40.1-64-bit.exe).
+3. make sure you have NodeJS installed (install it if you don't have it: https://nodejs.org/dist/v18.16.0/node-v18.16.0-x64.msi).
 4. make sure you have @nestjs/cli installed (install it if you don't have it: npm i -g @nestjs/cli).
 5. make sure you have @angular/cli installed (install it if you don't have it: npm install -g @angular/cli).
 
