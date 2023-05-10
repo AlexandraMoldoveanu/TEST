@@ -1,0 +1,23 @@
+import { Controller, Get, Param } from '@nestjs/common';
+import {  PostComment } from 'src/models/post-comment.model';
+import { PostCommentsService } from './post-comments.service';
+
+
+@Controller('comments')
+export class CommentsController {
+    constructor(private readonly postCommentsService: PostCommentsService) {}
+
+    @Get()
+    getAllComments(): PostComment[]  {
+      return this.postCommentsService.getAllComments();
+    }
+  
+    @Get(':id')
+    getCommentById(@Param() params): PostComment {
+        return this.postCommentsService.getCommentById(+params.id);
+    }
+
+    getCommentsForPostId(@Param() postId: number): PostComment[] {
+        return this.postCommentsService.getCommentsForPostId(+postId);
+    }
+}
