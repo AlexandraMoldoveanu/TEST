@@ -1,0 +1,8 @@
+<h3>Comments component</h3>
+
+<ng-container *ngIf="comments">
+    <div *ngFor="let comment of comments"  class="clickable list-item">
+        <h4>{{comment.name}}</h4>
+        <p>{{comment.body}}</p>
+    </div>
+</ng-container>
