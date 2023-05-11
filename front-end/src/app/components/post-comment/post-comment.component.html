@@ -1,0 +1,11 @@
+
+<h3>Post-comment component</h3>
+
+<ng-container *ngIf="comment">
+    <h4>{{comment.name}}</h4>
+    <p>{{comment.body}}</p>
+    <p>PostId: {{comment.postId}}</p>
+    <p>Id: {{comment.id}}</p>
+</ng-container>
+
+<button type="button" (click)="onClickBack()">Back</button>

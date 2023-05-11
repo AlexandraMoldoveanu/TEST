@@ -38,5 +38,9 @@ export class PostCommentsComponent implements OnInit {
       }))
     );
   }
+
+  onClickComment(id: number): void {
+    this.router.navigate(['comments', id]);
+  }
 }
 //this.comments = comments.sort((a,b) =>  a.name.localeCompare(b.name)))
