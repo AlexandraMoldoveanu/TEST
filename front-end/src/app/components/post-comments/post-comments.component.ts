@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { PostComment } from 'src/app/models/post-comment.model';
 import { RestService } from 'src/app/services/rest/rest.service';
 
@@ -27,26 +27,17 @@ export class PostCommentsComponent implements OnInit {
 
   private getComments(): void {
     const postId = this.getPostId();
-    
+    let commentsObservable: Observable<PostComment[]>;
     if (!postId) {
-      this.subscription.add(this.getAllComments());
+      commentsObservable = this.restService.getAllComments();
+    } else {
+      commentsObservable = this.restService.getCommentsForPostId(postId)
     }
 
-    else {
-      this.subscription.add(this.getPostIdComments(postId));
-    }
-
+    this.subscription.add(commentsObservable.subscribe(
+      comments => this.comments = comments.sort(this.sortAscending)));
   }
 
-  private getAllComments(): Subscription {
-    return this.restService.getAllComments()
-      .subscribe(comments => this.comments = comments.sort(this.sortAscending))
-  }
-
-  private getPostIdComments(postId: number): Subscription {
-    return this.restService.getCommentsForPostId(postId)
-      .subscribe(comments => this.comments = comments.sort(this.sortAscending));
-  }
 
   onClickComment(id: number): void {
     this.router.navigate(['comments', id]);
@@ -57,15 +48,16 @@ export class PostCommentsComponent implements OnInit {
   }
 
   private sortAscending(a: PostComment, b: PostComment): number {
+    let nameA = a.name.toLowerCase();
+    let nameB = b.name.toLowerCase();
 
-    if (a.name < b.name) {
+    if (nameA < nameB) {
       return -1;
     }
-    if (a.name > b.name) {
+    if (nameA > nameB) {
       return 1;
     }
     return 0;
 
   }
 }
-//this.comments = comments.sort((a,b) =>  a.name.localeCompare(b.name)))
