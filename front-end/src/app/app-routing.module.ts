@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'posts', component: PostsComponent },
   { path: 'posts/:id', component: PostComponent },
   { path: 'comments', component: PostCommentsComponent },
+  { path: 'posts/:postId/comments', component: PostCommentsComponent },
   { path: 'comments/:id', component: PostCommentComponent },
   { path: '*', redirectTo: '', pathMatch: 'full' }
 ];
