@@ -16,14 +16,10 @@ export class CommentsController {
     getCommentById(@Param() params): PostComment {
         return this.postCommentsService.getCommentById(+params.id);
     }
-    // getCommentById(@Param('id', ParseIntPipe) id: number): PostComment {
-    //     return this.postCommentsService.getCommentById(params.id);
-    // }
+
     @Get('getcommentsforpostid/:postId')
     getCommentsForPostId(@Param('postId') postId: number): PostComment[] {
         return this.postCommentsService.getCommentsForPostId(+postId);
     }
-    // getCommentsForPostId(@Param('postId', ParseIntPipe) postId: number): PostComment[] {
-    //     return this.postCommentsService.getCommentsForPostId(postId);
-    // }
+
 }
