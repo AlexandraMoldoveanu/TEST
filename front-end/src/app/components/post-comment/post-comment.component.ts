@@ -10,13 +10,13 @@ import { RestService } from 'src/app/services/rest/rest.service';
   templateUrl: './post-comment.component.html',
   styleUrls: ['./post-comment.component.scss']
 })
-export class PostCommentComponent implements OnInit{
+export class PostCommentComponent implements OnInit {
   comment!: PostComment;
   subscription: Subscription = new Subscription();
 
-  constructor( private router: Router,
-               private restService: RestService,
-               private activatedRoute: ActivatedRoute ) { }
+  constructor(private router: Router,
+    private restService: RestService,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getComment();
@@ -37,7 +37,7 @@ export class PostCommentComponent implements OnInit{
       this.navigateToPostComments();
     } else {
       this.subscription.add(
-        this.restService. getCommentById(commentId).subscribe(comment => this.comment = comment)
+        this.restService.getCommentById(commentId).subscribe(comment => this.comment = comment)
       );
     }
   }
@@ -46,7 +46,7 @@ export class PostCommentComponent implements OnInit{
     return this.activatedRoute.snapshot.paramMap.get('id') as number | null;
   }
 
-  private navigateToPostComments(): void{
+  private navigateToPostComments(): void {
     this.router.navigate(['comments']);
   }
 
